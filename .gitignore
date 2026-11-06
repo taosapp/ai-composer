@@ -1,0 +1,45 @@
+# ============================================================
+# ai-composer .gitignore
+# 原则：模型权重、外部二进制、缓存、日志、生成物一律不入库
+# ============================================================
+
+# ---- 模型权重（体积巨大，单独用移动硬盘备份）----
+music-gen/ACE-Step-1.5/checkpoints/
+music-gen/models/
+
+# ---- 上游 ACE-Step 代码（外部 clone，不 vendor）----
+music-gen/ACE-Step-1.5/
+
+# ---- ffmpeg 等外部二进制（单文件 >100MB，GitHub 拒绝）----
+music-gen/tools/
+*.zip
+
+# ---- 缓存 / 日志 / 运行时 ----
+music-gen/.hf-cache/
+music-gen/logs/
+**/.cache/
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# ---- 临时文件 / 备份 ----
+*.tmp
+*.temp
+*.bak
+*.part
+*.incomplete
+
+# ---- 工具生成物 ----
+.trae-html-share-packages/
+.screenshots/
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---- 本地密钥（如有）----
+.env
+.env.local
+*.secret

@@ -1,0 +1,31 @@
+# music-gen 环境依赖（conda 安装，torch 由 cu126 单独安装）
+# 用法：python -m pip install -r requirements-conda.txt
+transformers>=4.51.0,<4.58.0
+diffusers>=0.37.0
+gradio==6.2.0
+matplotlib>=3.7.5
+scipy>=1.10.1
+soundfile>=0.13.1
+loguru>=0.7.3
+einops>=0.8.1
+accelerate>=1.12.0
+fastapi>=0.110.0
+diskcache
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.18
+numba>=0.63.1
+vector-quantize-pytorch>=1.27.15
+torchao>=0.16.0,<0.17.0
+toml
+modelscope
+huggingface_hub
+typer-slim>=0.21.1
+pytorch-wavelets>=1.3.0
+pywavelets>=1.9.0
+setuptools<72
+safetensors==0.7.0
+peft>=0.18.0
+lycoris-lora
+lightning>=2.0.0
+tensorboard>=2.0.0
+xxhash
